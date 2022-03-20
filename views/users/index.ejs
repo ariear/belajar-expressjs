@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Users</title>
+</head>
+<body>
+    <%- include('../components/navbar')  %> 
+    <p>Daftar User (<%= siswa.length  %> )</p>
+    <form action="/users" method="get">
+        <input type="text" name="keyword">
+        <button>Cari</button>
+    </form>
+    <ul>
+        <% if (siswa.length > 0) { %>
+            <% siswa.forEach(function(user){ %>
+                <li style="display: flex;">
+                    <a href="/users/<%= user.id  %> "><%= user.nama  %></a>
+                    <form action="/users/delete/<%= user.id  %> " method="post">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        <% } else {%>
+                <li>Data siswa belum ada</li>
+        <% } %> 
+    </ul>
+    <%- include('../components/footer')  %> 
+</body>
+</html>

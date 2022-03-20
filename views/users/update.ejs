@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Edit</title>
+</head>
+<body>
+    <h3>Edit Data siswa</h3>
+    <form action="/users/<%= datasiswa[0].id %>/edit" method="POST">
+        <div>
+            <label for="">Nama</label>
+            <input type="text" name="nama" value="<%= datasiswa[0].nama %> " id="">
+        </div>
+        <div>
+            <label for="">Kelas</label>
+            <input type="text" name="kelas" value="<%= datasiswa[0].kelas %> " id="">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="email" value="<%= datasiswa[0].email %> " id="">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="text" name="password" value="<%= datasiswa[0].password %> " id="">
+        </div>
+        <div>
+            <button type="submit">Update</button>
+        </div>
+    </form>
+</body>
+</html>

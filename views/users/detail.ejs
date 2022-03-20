@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('../components/navbar')  %> 
+    Detail Siswa
+    <ul>
+        <% detaildata.forEach(function(siswa){ %>
+            <li><%= siswa.nama  %> </li>
+            <li><%= siswa.kelas  %> </li>
+            <li><%= siswa.email  %> </li>
+            <li><%= siswa.password  %> </li>
+        <% }); %>
+        <a href="/users/<%= detaildata[0].id %>/edit">Edit</a>
+    </ul>
+    <%- include('../components/footer')  %> 
+</body>
+</html>

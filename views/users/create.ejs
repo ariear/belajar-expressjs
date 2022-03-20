@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Create</title>
+</head>
+<body>
+    <%- include('../components/navbar')  %> 
+    <h3>Create New User</h3>
+    <form action="/users" method="post">
+        <div>
+            <label for="">Nama</label>
+            <input type="text" name="nama" id="">
+        </div>
+        <div>
+            <label for="">Kelas</label>
+            <input type="text" name="kelas" id="">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" name="email" id="">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="password" id="">
+        </div>
+        <button type="submit">Send</button>
+    </form>
+
+    <%- include('../components/footer')  %> 
+</body>
+</html>
