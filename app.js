@@ -17,7 +17,7 @@ const myLogger = (request, response, next) => {     // <-- this is middleware in
 }
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/sekolah');
+mongoose.connect('mongodb+srv://arie:arie@cluster0.tylof.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
 
 app.use(myLogger)
 
