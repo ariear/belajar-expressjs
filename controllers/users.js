@@ -69,37 +69,3 @@ module.exports = {
         response.redirect('/users')
     }
 }
-
-
-const dataSiswa = [
-    {
-        id: 1,
-        nama: 'Arie',
-        kelas: 'XI-RPL A'
-    },
-    {
-        id: 2,
-        nama: 'Dio',
-        kelas: 'XI-RPL A'
-    },
-    {
-        id: 3,
-        nama: 'Hibban',
-        kelas: 'XI-RPL B'
-    },
-    {
-        id: 4,
-        nama: 'Fatur',
-        kelas: 'XI-RPL B'
-    },
-    {
-        id: 5,
-        nama: 'Bagas',
-        kelas: 'XI-RPL A'
-    },
-    {
-        id: 6,
-        nama: 'Sani',
-        kelas: 'X-TKJ B'
-    },
-]
